@@ -15,3 +15,5 @@ var day = Weekday.monday
 day = .tuesday
 day = .friday
 print(day)
+
+
