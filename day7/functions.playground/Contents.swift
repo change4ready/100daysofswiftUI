@@ -49,3 +49,46 @@ func pythagoras(a: Double, b: Double) -> Double {
 
 let c = pythagoras(a: 3, b: 4)
 print(c)
+
+
+// returning multiple values from a string
+func isUppercase(string: String) -> Bool {
+    string == string.uppercased()
+}
+
+//
+//func getUser() -> [String: String] {
+//    ["firstName": "Taylor", "lastName": "Swift"]
+//}
+//
+//let user = getUser()
+//print("Name: \(user["firstName", default: "?"]) \(user["lasrName", default: "?"])")
+//
+//
+
+
+func getUser() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+
+let user = getUser()
+
+print("Name: \(user.firstName) \(user.lastName)")
+
+
+func rollDice(sides: Int, count: Int) -> [Int] {
+    // Start with an empty array
+    var rolls = [Int]()
+    
+    // Rolls as many dice as needed
+    for _ in 1...count {
+        // Add each result to our array
+        let roll = Int.random(in: 1...sides)
+        rolls.append(roll)
+    }
+    
+    // Send back all the rols
+    return rolls
+}
+
+let rolls = rollDice(sides: 6, count: 4)
